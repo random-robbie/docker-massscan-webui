@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `docker_massscan`;
+create database docker_massscan;
 USE `docker_massscan`;
 DROP TABLE IF EXISTS `data`;
 CREATE TABLE IF NOT EXISTS `data` (
