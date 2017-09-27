@@ -20,6 +20,7 @@ services:
         environment:
             - "MYSQL_ROOT_PASSWORD=docker"
             - "MYSQL_DATABASE=docker_massscan"
+            - "MYSQL_ROOT_HOST=192.168.1.71"
         volumes:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
             - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
