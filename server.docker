@@ -20,6 +20,9 @@ RUN docker-php-ext-install curl
 RUN docker-php-ext-install tidy
 RUN docker-php-ext-install pdo 
 RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install pdo_mysqi
+RUN docker-php-ext-install json
+
 
 # Enable Rewrite
 RUN a2enmod rewrite
