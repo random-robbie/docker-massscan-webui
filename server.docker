@@ -8,11 +8,12 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install -y -u apt-utils unzip mysql-client wget curl ca-certificates git
 
 # Missing devel packages for the PHP modules installation
-RUN apt-get install -y icu-devtools libxml2-dev php-mysqli
+RUN apt-get install -y icu-devtools libxml2-dev
 RUN apt-get install -y libcurl4-nss-dev libtidy-dev
 
 # Install PHP modules
 RUN docker-php-ext-install mysql
+RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install soap
 RUN docker-php-ext-install gettext
 RUN docker-php-ext-install curl
