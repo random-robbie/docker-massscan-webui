@@ -19,7 +19,6 @@ services:
             dockerfile: mysql.docker
         environment:
             - "MYSQL_ROOT_PASSWORD=docker"
-            - "MYSQL_ROOT_HOST=%"
             - "MYSQL_DATABASE=docker_massscan"
         volumes:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
