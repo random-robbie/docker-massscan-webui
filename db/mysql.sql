@@ -48,3 +48,6 @@ CREATE TABLE IF NOT EXISTS `data` (
 -- Indexes for table `data`
 --
 ALTER TABLE `data` ADD FULLTEXT KEY `banner` (`banner`,`title`);
+
+USE `mysql`;
+UPDATE `user` SET `Host` = '%' WHERE `user`.`Host` = '%' AND `user`.`User` = 'root';`
