@@ -18,6 +18,8 @@ RUN docker-php-ext-install soap
 RUN docker-php-ext-install gettext
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install tidy
+RUN docker-php-ext-install pdo 
+RUN docker-php-ext-install pdo_mysql
 
 # Enable Rewrite
 RUN a2enmod rewrite
