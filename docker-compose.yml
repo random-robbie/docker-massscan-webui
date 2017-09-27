@@ -21,6 +21,6 @@ services:
             - "MYSQL_ROOT_PASSWORD=twat"
         volumes:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
-            - ./db/:/docker-entrypoint-initdb.d
+            - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
         ports:
             - 3306:3306
