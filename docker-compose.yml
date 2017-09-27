@@ -18,7 +18,7 @@ services:
             context: .
             dockerfile: mysql.docker
         environment:
-            - "MYSQL_ROOT_PASSWORD=twat"
+            - "MYSQL_ROOT_PASSWORD=docker"
         volumes:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
             - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
