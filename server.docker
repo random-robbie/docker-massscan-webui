@@ -1,10 +1,35 @@
-FROM debian:buster-slim
+FROM php:5-apache
+
+WORKDIR /
+
+# Prepare
 RUN apt-get update
-RUN apt-get install git curl nano apache2 php libapache2-mod-php php7.1-mysqli php-xml -y
+RUN apt-get dist-upgrade -y
+RUN apt-get install -y -u apt-utils unzip mysql-client wget curl ca-certificates git
+
+# Missing devel packages for the PHP modules installation
+RUN apt-get install -y icu-devtools libxml2-dev
+RUN apt-get install -y libcurl4-nss-dev libtidy-dev
+
+# Install PHP modules
+RUN docker-php-ext-install mysql
+RUN docker-php-ext-install soap
+RUN docker-php-ext-install gettext
+RUN docker-php-ext-install curl
+RUN docker-php-ext-install tidy
+
+# Enable Rewrite
+RUN a2enmod rewrite
+
 RUN git clone https://github.com/offensive-security/masscan-web-ui
 RUN mv masscan-web-ui/* /var/www/html/
 RUN cd /var/www/html/
 ADD config.php /var/www/html/config.php
+
+# Finish installing broken packages
+RUN apt-get install -f -y
+
+
 EXPOSE 80
 
 CMD ["apache2-foreground"]
