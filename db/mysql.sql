@@ -50,4 +50,4 @@ CREATE TABLE IF NOT EXISTS `data` (
 ALTER TABLE `data` ADD FULLTEXT KEY `banner` (`banner`,`title`);
 
 USE `mysql`;
-UPDATE `user` SET `Host` = '%' WHERE `user`.`Host` = '%' AND `user`.`User` = 'root';`
+UPDATE `user` SET `host` = '%' WHERE `user` = '%' AND `user` = 'root';
