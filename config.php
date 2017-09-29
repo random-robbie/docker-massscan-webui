@@ -15,7 +15,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED & ~E_WARNING);
  * For DB_DRIVER use mysql for MySQL or pgsql for PostgreSQL
  */
 define('DB_DRIVER',	    'mysql');
-define('DB_HOST',	    'massscan-database');
+define('DB_HOST',	    'massscan-database:9906');
 define('DB_USERNAME',	'root');
 define('DB_PASSWORD', 	'docker');
 define('DB_DATABASE', 	'docker_massscan');
