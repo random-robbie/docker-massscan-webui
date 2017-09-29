@@ -25,5 +25,3 @@ services:
             - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
         ports:
             - 3306:3306
-        links:
-            - webserver
