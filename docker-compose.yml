@@ -6,8 +6,6 @@ services:
         build:
             context: .
             dockerfile: server.docker
-            depends_on:
-            - database
         ports:
             - 91:80
         links:
