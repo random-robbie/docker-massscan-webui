@@ -26,4 +26,4 @@ services:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
             - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
         ports:
-            - 3306:3306
+            - 9906:3306
