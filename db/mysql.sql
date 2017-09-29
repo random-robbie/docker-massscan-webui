@@ -49,3 +49,7 @@ CREATE TABLE IF NOT EXISTS `data` (
 --
 ALTER TABLE `data` ADD FULLTEXT KEY `banner` (`banner`,`title`);
 
+USE `mysql`;		
+UPDATE `user` SET `host` = '%' WHERE `host` = '1%'		
+FLUSH PRIVILEGES;
+
