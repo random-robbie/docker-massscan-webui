@@ -22,7 +22,6 @@ services:
             - "MYSQL_DATABASE=docker_massscan"
             - "MYSQL_USER=docker"
             - "MYSQL_PASSWORD=docker"
-            - "MYSQL_HOST=%"
         volumes:
             - /home/host/docker/mysql-storage/:/var/lib/mysql
             - ./db/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
