@@ -30,7 +30,6 @@ RUN git clone https://github.com/offensive-security/masscan-web-ui
 RUN mv masscan-web-ui/* /var/www/html/
 RUN cd /var/www/html/
 ADD config.php /var/www/html/config.php
-ADD functions.php /var/www/html/includes/functions.php
 
 # Finish installing broken packages
 RUN apt-get install -f -y
