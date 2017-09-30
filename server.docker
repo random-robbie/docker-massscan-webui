@@ -5,7 +5,7 @@ WORKDIR /
 # Prepare
 RUN apt-get update
 RUN apt-get dist-upgrade -y
-RUN apt-get install -y -u apt-utils unzip mysql-client wget curl ca-certificates git
+RUN apt-get install -y -u apt-utils unzip mysql-client wget curl ca-certificates git nano
 
 # Missing devel packages for the PHP modules installation
 RUN apt-get install -y icu-devtools libxml2-dev
